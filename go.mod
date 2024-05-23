@@ -11,6 +11,7 @@ replace github.com/moby/buildkit => github.com/dagger/buildkit v0.0.0-2024050717
 
 require (
 	dagger.io/dagger v0.11.3
+	buf.build/gen/go/namespace/cloud/protocolbuffers/go v1.34.1-20240411083959-1d79e1b1fb06.1
 	github.com/99designs/gqlgen v0.17.44
 	github.com/Khan/genqlient v0.7.0
 	github.com/MakeNowJust/heredoc/v2 v2.0.1
@@ -43,7 +44,7 @@ require (
 	github.com/google/go-github/v59 v59.0.0
 	github.com/google/uuid v1.6.0
 	github.com/goproxy/goproxy v0.16.9
-	github.com/gorilla/websocket v1.5.0
+	github.com/gorilla/websocket v1.5.1
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackpal/gateway v1.0.7
 	github.com/juju/ansiterm v1.0.0
@@ -109,12 +110,14 @@ require (
 	golang.org/x/tools v0.20.0
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240325203815-454cdb8f5daa
 	google.golang.org/grpc v1.63.2
-	google.golang.org/protobuf v1.33.0
+	google.golang.org/protobuf v1.34.1
 	gopkg.in/yaml.v3 v3.0.1
 	gotest.tools/v3 v3.5.1
+	namespacelabs.dev/integrations v0.0.1-dev
 )
 
 require (
+	buf.build/gen/go/namespace/cloud/grpc/go v1.3.0-20231126152223-7def32713e70.2 // indirect
 	dario.cat/mergo v1.0.0 // indirect
 	github.com/AdaLogics/go-fuzz-headers v0.0.0-20230811130428-ced1acdcaa24 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.1.0 // indirect
@@ -200,6 +203,9 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
+	github.com/jpillora/chisel v1.9.1 // indirect
+	github.com/jpillora/sizestr v1.0.0 // indirect
+	github.com/jxskiss/base62 v1.1.0 // indirect
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
@@ -231,6 +237,7 @@ require (
 	github.com/samber/lo v1.38.1 // indirect
 	github.com/samber/slog-common v0.14.0 // indirect
 	github.com/secure-systems-lab/go-securesystemslib v0.4.0 // indirect
+	github.com/segmentio/ksuid v1.0.4 // indirect
 	github.com/sergi/go-diff v1.3.2-0.20230802210424-5b0b94c5c0d3 // indirect
 	github.com/shibumi/go-pathspec v1.3.0 // indirect
 	github.com/skeema/knownhosts v1.2.2 // indirect
@@ -260,4 +267,5 @@ require (
 	google.golang.org/genproto v0.0.0-20240227224415-6ceb2ff114de // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20240227224415-6ceb2ff114de // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
+	namespacelabs.dev/go-ids v0.0.0-20221124082625-9fc72ee06af7 // indirect
 )
