@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   lint:
-    runs-on: "nscloud-ubuntu-24.04-amd64-4x8"
+    runs-on: "nscloud-ubuntu-24.04-amd64-16x16"
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
           function: "scripts lint"
 
   test:
-    runs-on: "nscloud-ubuntu-24.04-amd64-16x32"
+    runs-on: "nscloud-ubuntu-24.04-amd64-32x64"
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
@@ -62,7 +62,7 @@ jobs:
           upload-logs: true
 
   test-publish:
-    runs-on: "nscloud-ubuntu-24.04-amd64-4x8"
+    runs-on: "nscloud-ubuntu-24.04-amd64-16x16"
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -76,7 +76,7 @@ jobs:
           function: "engine publish --image=dagger-engine.dev --tag=main --dry-run"
 
   scan-engine:
-    runs-on: "nscloud-ubuntu-24.04-amd64-4x8"
+    runs-on: "nscloud-ubuntu-24.04-amd64-8x8"
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
