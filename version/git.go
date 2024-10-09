@@ -39,7 +39,7 @@ func git(ctx context.Context, gitDir *dagger.Directory, dir *dagger.Directory) (
 		// do various unshallowing operations (only the bare minimum is
 		// provided by the core git functions which are used by our remote git
 		// module sources)
-		remote := "https://github.com/dagger/dagger.git"
+		remote := "https://github.com/namespace-integration-demos/dagger.git"
 		maxDepth := "2147483647" // see https://git-scm.com/docs/shallow
 		ctr = ctr.
 			WithExec([]string{
