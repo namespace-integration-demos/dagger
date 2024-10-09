@@ -60,8 +60,7 @@ func (t Engine) Dev(ctx context.Context) error {
 	}
 
 	containerName := EngineContainerName
-	// volumeName := EngineContainerName
-	volumeName := "/cache/dagger" // Use Namespace cache volume.
+	volumeName := EngineContainerName
 	imageName := fmt.Sprintf("localhost/%s:latest", EngineContainerName)
 
 	// #nosec

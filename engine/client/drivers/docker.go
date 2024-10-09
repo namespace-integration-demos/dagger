@@ -107,13 +107,18 @@ func (d *dockerDriver) create(ctx context.Context, imageRef string, opts *Driver
 		}
 	}
 
+	engineVolume := os.Getenv("_EXPERIMENTAL_DAGGER_ENGINE_VOLUME")
+	if engineVolume == "" {
+		engineVolume = distconsts.EngineDefaultStateDir
+	}
+
 	cmd := exec.CommandContext(ctx,
 		"docker",
 		"run",
 		"--name", containerName,
 		"-d",
 		"--restart", "always",
-		"-v", distconsts.EngineDefaultStateDir,
+		"-v", engineVolume,
 		"--privileged",
 	)
 	// explicitly pass current env vars; if we append more below existing ones like DOCKER_HOST
