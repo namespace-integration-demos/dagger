@@ -72,6 +72,12 @@ jobs:
           function: "test specific --run='TestModule|TestGo|TestPython|TestTypescript|TestElixir|TestPHP|TestContainer' --skip='TestDev' --race=true --parallel=16"
           dev-engine: true
           upload-logs: true
+      - name: Breakpoint
+        if: failure()
+        uses: namespacelabs/breakpoint-action@v0
+        with:
+          duration: 30m
+          authorized-users: hugosantos
 
   test-publish:
     runs-on:
